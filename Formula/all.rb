@@ -5,21 +5,21 @@
 class All < Formula
   desc "Filesystem CLI Tools"
   homepage ""
-  version "1.8.6"
+  version "1.8.7"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/kamackay/all/releases/download/v1.8.6/all_1.8.6_Darwin_arm64.tar.gz"
-      sha256 "2f19d79b0daeaa72b6483622e0ef720855f747d5c0317fb124dbb12450dea33b"
+    if Hardware::CPU.intel?
+      url "https://github.com/kamackay/all/releases/download/v1.8.7/all_1.8.7_Darwin_x86_64.tar.gz"
+      sha256 "60da18da509369fe1b9cadad7ce64af04b5187bf0f2fea3e996e27e59d547b10"
 
       def install
         bin.install "all"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/kamackay/all/releases/download/v1.8.6/all_1.8.6_Darwin_x86_64.tar.gz"
-      sha256 "476ad2f2caed2d74293db080eb752158ca43b928bd38fe5d54fd094e0919bb3e"
+    if Hardware::CPU.arm?
+      url "https://github.com/kamackay/all/releases/download/v1.8.7/all_1.8.7_Darwin_arm64.tar.gz"
+      sha256 "e8e2bbc4858a28a3d60a3515f83c6cc1dae483522965b9af64d267573a4b1517"
 
       def install
         bin.install "all"
@@ -28,17 +28,17 @@ class All < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/kamackay/all/releases/download/v1.8.6/all_1.8.6_Linux_x86_64.tar.gz"
-      sha256 "30929c5ad077c32cc54d467e90d73cce89e1d9024e685bbbb2dc48e16ada52de"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/kamackay/all/releases/download/v1.8.7/all_1.8.7_Linux_arm64.tar.gz"
+      sha256 "a63c1bb566e624ada9db0885944be30addb5b628f75845e2db042ae1f6e1282a"
 
       def install
         bin.install "all"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kamackay/all/releases/download/v1.8.6/all_1.8.6_Linux_arm64.tar.gz"
-      sha256 "0cf879c849d49aa76ce175dd4689001f55b4c7fbae7ace567779ec41274888ce"
+    if Hardware::CPU.intel?
+      url "https://github.com/kamackay/all/releases/download/v1.8.7/all_1.8.7_Linux_x86_64.tar.gz"
+      sha256 "a6a4228f691f89c7226d099a7c63527eb8dba36025dc1ad3e5876deb59e939f5"
 
       def install
         bin.install "all"
