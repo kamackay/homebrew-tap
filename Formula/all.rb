@@ -5,21 +5,21 @@
 class All < Formula
   desc "Filesystem CLI Tools"
   homepage ""
-  version "1.9.0"
+  version "1.9.1"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/kamackay/all/releases/download/v1.9.0/all_1.9.0_Darwin_arm64.tar.gz"
-      sha256 "c5ffbec93a4b8e1604a651c43e1fb3a293fcf9399dd7ec35a023a012ac97ad74"
+    if Hardware::CPU.intel?
+      url "https://github.com/kamackay/all/releases/download/v1.9.1/all_1.9.1_Darwin_x86_64.tar.gz"
+      sha256 "bae4310edad4b0cdafd2aa03eee0d4db04335c7b0bb9fd45ef29a612e59af853"
 
       def install
         bin.install "all"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/kamackay/all/releases/download/v1.9.0/all_1.9.0_Darwin_x86_64.tar.gz"
-      sha256 "5c8b24a2869cec1af941a5d05f26837cdbb3bd1de9897d2d77196a14a0da4c38"
+    if Hardware::CPU.arm?
+      url "https://github.com/kamackay/all/releases/download/v1.9.1/all_1.9.1_Darwin_arm64.tar.gz"
+      sha256 "279ce243a7e2a9dfcd942abc0e12611f0ad09dd323afc5dd91572033e292fb0e"
 
       def install
         bin.install "all"
@@ -29,16 +29,16 @@ class All < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/kamackay/all/releases/download/v1.9.0/all_1.9.0_Linux_x86_64.tar.gz"
-      sha256 "742067e4931f5889b649038583a9d9d9f1b3085d92b2c48e4c5433b845eefd74"
+      url "https://github.com/kamackay/all/releases/download/v1.9.1/all_1.9.1_Linux_x86_64.tar.gz"
+      sha256 "281edb15499efcc968e40d3304937e67afe2c829229b1ba3a063bade81c000a8"
 
       def install
         bin.install "all"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kamackay/all/releases/download/v1.9.0/all_1.9.0_Linux_arm64.tar.gz"
-      sha256 "b8b5fa2bc9e86f44348100a4771e658e0ba0f13d7a97b7d8d2bac14ab28e7ca7"
+      url "https://github.com/kamackay/all/releases/download/v1.9.1/all_1.9.1_Linux_arm64.tar.gz"
+      sha256 "04ad8c97376fd4d3d5350ce4bf4ffa3482b5de3294a0423e79c4c6031a0302a6"
 
       def install
         bin.install "all"
