@@ -5,21 +5,21 @@
 class All < Formula
   desc "Filesystem CLI Tools"
   homepage ""
-  version "1.10.0"
+  version "1.10.1"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/kamackay/all/releases/download/v1.10.0/all_1.10.0_Darwin_arm64.tar.gz"
-      sha256 "aa3c6e922d2f6ad48832f73a9d572ecb81b9c49bfb1cc589874f85e64eb91fc6"
+    if Hardware::CPU.intel?
+      url "https://github.com/kamackay/all/releases/download/v1.10.1/all_1.10.1_Darwin_x86_64.tar.gz"
+      sha256 "48c1f5953bd4e349ae32b2b49749a70529f8b1a816c3d6ba5f63c654f7831a76"
 
       def install
         bin.install "all"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/kamackay/all/releases/download/v1.10.0/all_1.10.0_Darwin_x86_64.tar.gz"
-      sha256 "a1a36d163e879de5f598b381e07f20ab0273136c78752305201c25b79df94013"
+    if Hardware::CPU.arm?
+      url "https://github.com/kamackay/all/releases/download/v1.10.1/all_1.10.1_Darwin_arm64.tar.gz"
+      sha256 "79278ebe08f74dc4cf5d7af3d8bac20e76758426a4c7af0592582c77d221f7c2"
 
       def install
         bin.install "all"
@@ -29,16 +29,16 @@ class All < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kamackay/all/releases/download/v1.10.0/all_1.10.0_Linux_arm64.tar.gz"
-      sha256 "5197d39e7e4c6cc5a3f3b7846779dc82d8c4fc702e5dac4f682aff933cba103b"
+      url "https://github.com/kamackay/all/releases/download/v1.10.1/all_1.10.1_Linux_arm64.tar.gz"
+      sha256 "81faa742b3739003d4571a0e9831ad58cf40aa2dac5b5474ba5a1c58f06baa12"
 
       def install
         bin.install "all"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kamackay/all/releases/download/v1.10.0/all_1.10.0_Linux_x86_64.tar.gz"
-      sha256 "2afcb69a72b1cbdf9e5daba5221749ff52eca33f1605751cd55afcbdad6186ad"
+      url "https://github.com/kamackay/all/releases/download/v1.10.1/all_1.10.1_Linux_x86_64.tar.gz"
+      sha256 "b8ede0621ed0d3ea2bdd3e8a337736d4b9030cafdfa6d915580c69cb999a831e"
 
       def install
         bin.install "all"
