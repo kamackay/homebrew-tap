@@ -5,21 +5,21 @@
 class All < Formula
   desc "Filesystem CLI Tools"
   homepage ""
-  version "1.10.1"
+  version "1.10.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kamackay/all/releases/download/v1.10.1/all_1.10.1_Darwin_x86_64.tar.gz"
-      sha256 "48c1f5953bd4e349ae32b2b49749a70529f8b1a816c3d6ba5f63c654f7831a76"
+      url "https://github.com/kamackay/all/releases/download/v1.10.2/all_1.10.2_Darwin_x86_64.tar.gz"
+      sha256 "77766f40044dacf9981a19a4362d5cc71f32bc48739406833fc802253abdb6e8"
 
       def install
         bin.install "all"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kamackay/all/releases/download/v1.10.1/all_1.10.1_Darwin_arm64.tar.gz"
-      sha256 "79278ebe08f74dc4cf5d7af3d8bac20e76758426a4c7af0592582c77d221f7c2"
+      url "https://github.com/kamackay/all/releases/download/v1.10.2/all_1.10.2_Darwin_arm64.tar.gz"
+      sha256 "eb148cf4b7eb1ea006d0303ae96023c652266ba917dd0239582032e57744a851"
 
       def install
         bin.install "all"
@@ -28,17 +28,17 @@ class All < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kamackay/all/releases/download/v1.10.1/all_1.10.1_Linux_arm64.tar.gz"
-      sha256 "81faa742b3739003d4571a0e9831ad58cf40aa2dac5b5474ba5a1c58f06baa12"
+    if Hardware::CPU.intel?
+      url "https://github.com/kamackay/all/releases/download/v1.10.2/all_1.10.2_Linux_x86_64.tar.gz"
+      sha256 "7e0cdcc2096f315027f68fb05a1ab089ef12cb4c3c97fe7e55ca2cbd7c972f51"
 
       def install
         bin.install "all"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/kamackay/all/releases/download/v1.10.1/all_1.10.1_Linux_x86_64.tar.gz"
-      sha256 "b8ede0621ed0d3ea2bdd3e8a337736d4b9030cafdfa6d915580c69cb999a831e"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/kamackay/all/releases/download/v1.10.2/all_1.10.2_Linux_arm64.tar.gz"
+      sha256 "39ed45b8c7763f68ab1b32db6b33e72e34209c8ce081bfcc87656e7f18707894"
 
       def install
         bin.install "all"
