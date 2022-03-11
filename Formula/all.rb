@@ -5,21 +5,21 @@
 class All < Formula
   desc "Filesystem CLI Tools"
   homepage ""
-  version "1.10.7"
+  version "1.10.8"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/kamackay/all/releases/download/v1.10.7/all_1.10.7_Darwin_x86_64.tar.gz"
-      sha256 "71e2e6a952d4f416cb860f473d337766b0bdaa60b440c0f9d9b7f320ecc5d453"
+    if Hardware::CPU.arm?
+      url "https://github.com/kamackay/all/releases/download/v1.10.8/all_1.10.8_Darwin_arm64.tar.gz"
+      sha256 "7ecb709e5bba7e71b797296d411280be00421bc8e906ceb368560fc0eab299ab"
 
       def install
         bin.install "all"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/kamackay/all/releases/download/v1.10.7/all_1.10.7_Darwin_arm64.tar.gz"
-      sha256 "58bdab115a0dd707f37ff77c381f4b35974baeb6fc76751ec8a3b699d76809e9"
+    if Hardware::CPU.intel?
+      url "https://github.com/kamackay/all/releases/download/v1.10.8/all_1.10.8_Darwin_x86_64.tar.gz"
+      sha256 "83eeee63150b0f1271391108abfe35b54dd5ad239d0191173c04c100bf8e7599"
 
       def install
         bin.install "all"
@@ -29,16 +29,16 @@ class All < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/kamackay/all/releases/download/v1.10.7/all_1.10.7_Linux_x86_64.tar.gz"
-      sha256 "c1ba56ef588062628929906ff1ad50d8d46800c4fc8af1672d41d0a02e70b9de"
+      url "https://github.com/kamackay/all/releases/download/v1.10.8/all_1.10.8_Linux_x86_64.tar.gz"
+      sha256 "f698d50603d9d70d75b6b9ff84b786f4bef63d20416df7a03c1442e61c57b93f"
 
       def install
         bin.install "all"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kamackay/all/releases/download/v1.10.7/all_1.10.7_Linux_arm64.tar.gz"
-      sha256 "0871b874018c1dfbe4c55bda50195e59c9b194c472e6c0e3f3aa8015f99c82b1"
+      url "https://github.com/kamackay/all/releases/download/v1.10.8/all_1.10.8_Linux_arm64.tar.gz"
+      sha256 "eefc846fe9b4cc524530be2aab1203a9ee5b33efc9f583a32836c91fab1b6070"
 
       def install
         bin.install "all"
