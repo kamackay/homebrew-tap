@@ -5,21 +5,21 @@
 class All < Formula
   desc "Filesystem CLI Tools"
   homepage ""
-  version "1.11.4"
+  version "1.11.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kamackay/all/releases/download/v1.11.4/all_1.11.4_Darwin_x86_64.tar.gz"
-      sha256 "f3b66a6e237c6c93ff1210848fcc46fd6c645ca8e3c4e3a9a8c5474b4b2f9df2"
+      url "https://github.com/kamackay/all/releases/download/v1.11.5/all_1.11.5_Darwin_x86_64.tar.gz"
+      sha256 "69a10f1d20bbf9b31010e5ef3733f6baee452bd3b86879fc4a441ebf630087b7"
 
       def install
         bin.install "all"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kamackay/all/releases/download/v1.11.4/all_1.11.4_Darwin_arm64.tar.gz"
-      sha256 "0f7ee96e9c39ec4dcf632ddaa42e0cc17ba8c1dabc2996332573edf26ec72844"
+      url "https://github.com/kamackay/all/releases/download/v1.11.5/all_1.11.5_Darwin_arm64.tar.gz"
+      sha256 "fd599ba9ec85c9d9bc844c3ff23b035dc64f84c3f679aa776e70cf300e4900a7"
 
       def install
         bin.install "all"
@@ -29,16 +29,16 @@ class All < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/kamackay/all/releases/download/v1.11.4/all_1.11.4_Linux_x86_64.tar.gz"
-      sha256 "46a3bc1da9417366ce1eff047ea38c13b9198888addb3525bc9e41222ee1ece8"
+      url "https://github.com/kamackay/all/releases/download/v1.11.5/all_1.11.5_Linux_x86_64.tar.gz"
+      sha256 "9ae53d514324924654d99f3df6a6e751595aa7b1d569fced251edfdd907549c9"
 
       def install
         bin.install "all"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kamackay/all/releases/download/v1.11.4/all_1.11.4_Linux_arm64.tar.gz"
-      sha256 "085c735311519210f4800621ff82cd7c6ce9166c1c54912cac0cb4ae4d77c9d8"
+      url "https://github.com/kamackay/all/releases/download/v1.11.5/all_1.11.5_Linux_arm64.tar.gz"
+      sha256 "4bc8e8dd32c243957dda8893be9467d1e5b60218890dfd0b0bcc61b4bb2cc68b"
 
       def install
         bin.install "all"
