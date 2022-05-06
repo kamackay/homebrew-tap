@@ -5,21 +5,21 @@
 class All < Formula
   desc "Filesystem CLI Tools"
   homepage ""
-  version "1.12.2"
+  version "1.12.3"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/kamackay/all/releases/download/v1.12.2/all_1.12.2_Darwin_arm64.tar.gz"
-      sha256 "2c01aa40cb74e85adb6e15815872e6f4948a2d479ecb172bc2ea7613dad5a3b1"
+    if Hardware::CPU.intel?
+      url "https://github.com/kamackay/all/releases/download/v1.12.3/all_1.12.3_Darwin_x86_64.tar.gz"
+      sha256 "92ef0728df07cd2be2c9eefdcae58fa8d5c3e205951cdb657e3871fcd77677d9"
 
       def install
         bin.install "all"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/kamackay/all/releases/download/v1.12.2/all_1.12.2_Darwin_x86_64.tar.gz"
-      sha256 "1ddbdfc4a96a3941a97519d7b64fe8da54499455ff5e2b17f9dc8dcd039d49eb"
+    if Hardware::CPU.arm?
+      url "https://github.com/kamackay/all/releases/download/v1.12.3/all_1.12.3_Darwin_arm64.tar.gz"
+      sha256 "42f83dc92e2fea024e58c9ad61bd23621401cb160ad2927ea34b50d7c32d6c74"
 
       def install
         bin.install "all"
@@ -29,16 +29,16 @@ class All < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/kamackay/all/releases/download/v1.12.2/all_1.12.2_Linux_x86_64.tar.gz"
-      sha256 "0322934f51f250cd87282759b766c3c5703f28f816e21cb50dca3a1af25005a2"
+      url "https://github.com/kamackay/all/releases/download/v1.12.3/all_1.12.3_Linux_x86_64.tar.gz"
+      sha256 "53a163f213055926aa9b2aa138737e87a11c466cb773a050981f282bfec6fd2f"
 
       def install
         bin.install "all"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kamackay/all/releases/download/v1.12.2/all_1.12.2_Linux_arm64.tar.gz"
-      sha256 "84306580ef37794663311109c5affdbac70f38aded58de68eab4b4d4f80551ea"
+      url "https://github.com/kamackay/all/releases/download/v1.12.3/all_1.12.3_Linux_arm64.tar.gz"
+      sha256 "a0fb9b971c4db28309ac332b02dc074529e22a971fff142071c5f7de150e312c"
 
       def install
         bin.install "all"
