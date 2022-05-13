@@ -5,21 +5,21 @@
 class Thru < Formula
   desc "CLI throughput tools"
   homepage ""
-  version "1.1.0"
+  version "1.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kamackay/thru/releases/download/v1.1.0/thru_1.1.0_Darwin_x86_64.tar.gz"
-      sha256 "98bebeaf872241d9b0d388edc7da3275cf02305b6241e53d1a51f3b9fb779906"
+      url "https://github.com/kamackay/thru/releases/download/v1.1.1/thru_1.1.1_Darwin_x86_64.tar.gz"
+      sha256 "1607eeea1acf79df96241053db239baccd4141b53149bb01cef855c564398c44"
 
       def install
         bin.install "thru"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kamackay/thru/releases/download/v1.1.0/thru_1.1.0_Darwin_arm64.tar.gz"
-      sha256 "97f320f13cc271f1447400edc4b0b74785bcd1111ffdae79c06b5c0a8b64ed01"
+      url "https://github.com/kamackay/thru/releases/download/v1.1.1/thru_1.1.1_Darwin_arm64.tar.gz"
+      sha256 "2e5a458fa5d4398ce4da2a87965a51ba35356f8502e842423fc3676f112be66d"
 
       def install
         bin.install "thru"
@@ -29,16 +29,16 @@ class Thru < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kamackay/thru/releases/download/v1.1.0/thru_1.1.0_Linux_arm64.tar.gz"
-      sha256 "45d301c5cfb97c7d33880e38ffbf574a2ca37478b80f83f437826e78fac01aca"
+      url "https://github.com/kamackay/thru/releases/download/v1.1.1/thru_1.1.1_Linux_arm64.tar.gz"
+      sha256 "09962ce6fec6ec2b8dd7cd040411a3d96f761d45d44d44c1716fadf7fc28f295"
 
       def install
         bin.install "thru"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kamackay/thru/releases/download/v1.1.0/thru_1.1.0_Linux_x86_64.tar.gz"
-      sha256 "e1ed0378c5f02449b6025aafa34641d92a754029e4b4ae365b819c33b76bb7cf"
+      url "https://github.com/kamackay/thru/releases/download/v1.1.1/thru_1.1.1_Linux_x86_64.tar.gz"
+      sha256 "d5e40a4534ff85217a17bae1eebf8a7dd55b8eee4943f4d261d8a645f47c61a7"
 
       def install
         bin.install "thru"
