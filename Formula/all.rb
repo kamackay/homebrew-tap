@@ -5,21 +5,21 @@
 class All < Formula
   desc "Filesystem CLI Tools"
   homepage ""
-  version "1.12.3"
+  version "1.12.4"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/kamackay/all/releases/download/v1.12.3/all_1.12.3_Darwin_x86_64.tar.gz"
-      sha256 "92ef0728df07cd2be2c9eefdcae58fa8d5c3e205951cdb657e3871fcd77677d9"
+    if Hardware::CPU.arm?
+      url "https://github.com/kamackay/all/releases/download/v1.12.4/all_1.12.4_Darwin_arm64.tar.gz"
+      sha256 "6ff7521c6611c28328cf06d523c15e2c54b7a1fb068eee23ec51162e4beec504"
 
       def install
         bin.install "all"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/kamackay/all/releases/download/v1.12.3/all_1.12.3_Darwin_arm64.tar.gz"
-      sha256 "42f83dc92e2fea024e58c9ad61bd23621401cb160ad2927ea34b50d7c32d6c74"
+    if Hardware::CPU.intel?
+      url "https://github.com/kamackay/all/releases/download/v1.12.4/all_1.12.4_Darwin_x86_64.tar.gz"
+      sha256 "ead86ea8a79285019a353ce4611d038e4d58060d7fdb005811f3f8fc2a96ff48"
 
       def install
         bin.install "all"
@@ -28,17 +28,17 @@ class All < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/kamackay/all/releases/download/v1.12.3/all_1.12.3_Linux_x86_64.tar.gz"
-      sha256 "53a163f213055926aa9b2aa138737e87a11c466cb773a050981f282bfec6fd2f"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/kamackay/all/releases/download/v1.12.4/all_1.12.4_Linux_arm64.tar.gz"
+      sha256 "aaf11aaba8529dc5fc2355a662a4fef353ea1f2c98fe89e3408231063c8c13f6"
 
       def install
         bin.install "all"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kamackay/all/releases/download/v1.12.3/all_1.12.3_Linux_arm64.tar.gz"
-      sha256 "a0fb9b971c4db28309ac332b02dc074529e22a971fff142071c5f7de150e312c"
+    if Hardware::CPU.intel?
+      url "https://github.com/kamackay/all/releases/download/v1.12.4/all_1.12.4_Linux_x86_64.tar.gz"
+      sha256 "23fb3915ba38c9a6576b75a487fd4c74a1f50028668bcce33c9935c6878eb2b7"
 
       def install
         bin.install "all"
