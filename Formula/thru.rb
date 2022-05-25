@@ -5,21 +5,21 @@
 class Thru < Formula
   desc "CLI throughput tools"
   homepage ""
-  version "1.1.1"
+  version "1.1.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kamackay/thru/releases/download/v1.1.1/thru_1.1.1_Darwin_x86_64.tar.gz"
-      sha256 "1607eeea1acf79df96241053db239baccd4141b53149bb01cef855c564398c44"
+      url "https://github.com/kamackay/thru/releases/download/v1.1.2/thru_1.1.2_Darwin_x86_64.tar.gz"
+      sha256 "7be80c5de5d7707127a1384a9ebf3cd7cc418e10ec5ecafe25070b7062e78ac4"
 
       def install
         bin.install "thru"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kamackay/thru/releases/download/v1.1.1/thru_1.1.1_Darwin_arm64.tar.gz"
-      sha256 "2e5a458fa5d4398ce4da2a87965a51ba35356f8502e842423fc3676f112be66d"
+      url "https://github.com/kamackay/thru/releases/download/v1.1.2/thru_1.1.2_Darwin_arm64.tar.gz"
+      sha256 "b6f1b7faef487ea921a358c61ba89ecb89823fee3a4d412030c27e610779d434"
 
       def install
         bin.install "thru"
@@ -28,17 +28,17 @@ class Thru < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kamackay/thru/releases/download/v1.1.1/thru_1.1.1_Linux_arm64.tar.gz"
-      sha256 "09962ce6fec6ec2b8dd7cd040411a3d96f761d45d44d44c1716fadf7fc28f295"
+    if Hardware::CPU.intel?
+      url "https://github.com/kamackay/thru/releases/download/v1.1.2/thru_1.1.2_Linux_x86_64.tar.gz"
+      sha256 "d13ccb7c7a86e678177390fd36d1877bb956984779c81c7c38c637613722b409"
 
       def install
         bin.install "thru"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/kamackay/thru/releases/download/v1.1.1/thru_1.1.1_Linux_x86_64.tar.gz"
-      sha256 "d5e40a4534ff85217a17bae1eebf8a7dd55b8eee4943f4d261d8a645f47c61a7"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/kamackay/thru/releases/download/v1.1.2/thru_1.1.2_Linux_arm64.tar.gz"
+      sha256 "d0db7754c0a8732e65bc14b306e161b0c46466656d9762f564445cba9bd3c03a"
 
       def install
         bin.install "thru"
