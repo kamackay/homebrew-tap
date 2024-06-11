@@ -5,21 +5,21 @@
 class All < Formula
   desc "Filesystem CLI Tools"
   homepage ""
-  version "1.13.6"
+  version "1.15.6"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/kamackay/all/releases/download/v1.13.6/all_1.13.6_Darwin_x86_64.tar.gz"
-      sha256 "ffeeaedd6aa2ea91ce610884407733030dea79a354306ab04ac29f18a5a0af20"
+    on_intel do
+      url "https://github.com/kamackay/all/releases/download/v1.15.6/all_Darwin_x86_64.tar.gz"
+      sha256 "a4cff8e9509c48f88cef7ce0b0e958c519b3308d35cf257eb1b41ae39e46262f"
 
       def install
         bin.install "all"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/kamackay/all/releases/download/v1.13.6/all_1.13.6_Darwin_arm64.tar.gz"
-      sha256 "2c909e86280bce6d07d5f89381c52bc2cedfaf96da88d1fd513d04a0b06e6bd3"
+    on_arm do
+      url "https://github.com/kamackay/all/releases/download/v1.15.6/all_Darwin_arm64.tar.gz"
+      sha256 "a2bfe9aa4a887bfcfd43797eef28ff00135a91f719c1172ca8b0727af597f207"
 
       def install
         bin.install "all"
@@ -28,20 +28,24 @@ class All < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kamackay/all/releases/download/v1.13.6/all_1.13.6_Linux_arm64.tar.gz"
-      sha256 "beb3d21c656e98274999214bd1955bb51b7c57fc70117e66b5ec15adaa655221"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/kamackay/all/releases/download/v1.15.6/all_Linux_x86_64.tar.gz"
+        sha256 "deda068b74562d34c6dd792ddf75a33a9787a97f46a96663b1dedfdf9c0adc50"
 
-      def install
-        bin.install "all"
+        def install
+          bin.install "all"
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/kamackay/all/releases/download/v1.13.6/all_1.13.6_Linux_x86_64.tar.gz"
-      sha256 "a0287c8865ddd3f065ad72f76a1acda52d3b559e04cc6ac6638eac5ba9ac7386"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/kamackay/all/releases/download/v1.15.6/all_Linux_arm64.tar.gz"
+        sha256 "49f2dfa90e7c6a967ae30e89efcccf9a06e33ce3bacff9632c2c322606e7218a"
 
-      def install
-        bin.install "all"
+        def install
+          bin.install "all"
+        end
       end
     end
   end
