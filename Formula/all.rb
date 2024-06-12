@@ -5,21 +5,21 @@
 class All < Formula
   desc "Filesystem CLI Tools"
   homepage ""
-  version "1.15.8"
+  version "1.16.1"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/kamackay/all/releases/download/v1.15.8/all_Darwin_x86_64.tar.gz"
-      sha256 "678e82b42f6c4d506948b73f3cc5774466e4f0ee02dd5ce64ec3153cfe486847"
+      url "https://github.com/kamackay/all/releases/download/v1.16.1/all_Darwin_x86_64.tar.gz"
+      sha256 "6b4694c5b87304fdc2f131cd1d7c7af7dc57052cfbb5fba29f7ae03401de3314"
 
       def install
         bin.install "all"
       end
     end
     on_arm do
-      url "https://github.com/kamackay/all/releases/download/v1.15.8/all_Darwin_arm64.tar.gz"
-      sha256 "ffbf30a0eb4fb9d9b62e7a774a6aa7adee3764818a9ba7274869738f1ec5a1f7"
+      url "https://github.com/kamackay/all/releases/download/v1.16.1/all_Darwin_arm64.tar.gz"
+      sha256 "5d4ddfc06ca68f12499c176b29fe82e0d72bc1f524b723acbc96bd8bc478cded"
 
       def install
         bin.install "all"
@@ -30,8 +30,8 @@ class All < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/kamackay/all/releases/download/v1.15.8/all_Linux_x86_64.tar.gz"
-        sha256 "37fad939565f5eb4f90f4c596dd81a818ab59b30cdd2fd61724901181520a1a2"
+        url "https://github.com/kamackay/all/releases/download/v1.16.1/all_Linux_x86_64.tar.gz"
+        sha256 "77b6129432a68a67b2d7914bb69f49daeac0b0dd66ee9dcb4dd774b282d2c6ff"
 
         def install
           bin.install "all"
@@ -40,8 +40,8 @@ class All < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/kamackay/all/releases/download/v1.15.8/all_Linux_arm64.tar.gz"
-        sha256 "f5060e46bf2a8a736e85bd9af0fc6946a47d2339bd5121fe1856ac9effe49415"
+        url "https://github.com/kamackay/all/releases/download/v1.16.1/all_Linux_arm64.tar.gz"
+        sha256 "ebb82c7eedef77bbf3f066ec0e012ae91cb366034fb85e31d9992e28bac88f16"
 
         def install
           bin.install "all"
